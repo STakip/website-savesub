@@ -1,0 +1,2 @@
+import {json,session,clearCookie,digest} from "../_lib.js";
+export async function onRequestPost({request,env}){const raw=request.headers.get("Cookie")?.match(/(?:^|;\s*)ss_session=([^;]+)/)?.[1];if(raw)await env.DB.prepare("DELETE FROM sessions WHERE token_hash=?").bind(await digest(raw)).run();return new Response(JSON.stringify({ok:true}),{headers:{"Content-Type":"application/json","Set-Cookie":clearCookie(),"Cache-Control":"no-store"}})}

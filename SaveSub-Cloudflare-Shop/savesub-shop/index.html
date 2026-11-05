@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090b12"><title>SaveSub — Digital Accounts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="glow glow-a"></div><div class="glow glow-b"></div>
+  <header class="topbar"><a class="brand" href="/"><span class="brand-mark">S</span> SaveSub<span class="dot">.</span></a>
+    <nav><a href="#products">Products</a><a href="#how">How it works</a></nav>
+    <div class="nav-actions"><button class="btn btn-quiet" id="loginOpen">Log in</button><button class="btn btn-primary" id="registerOpen">Create account</button><button class="btn btn-quiet hidden" id="accountBtn">My account</button><button class="btn btn-quiet hidden" id="logoutBtn">Log out</button></div>
+  </header>
+  <main>
+    <section class="hero"><div class="eyebrow"><span class="pulse"></span> DIGITAL PRODUCTS · PERSONAL SUPPORT</div>
+      <h1>Your next account.<br><span>One simple place.</span></h1>
+      <p class="hero-copy">Browse our digital account listings and contact us privately to arrange your order.</p>
+      <a class="btn btn-primary btn-large" href="#products">Explore products <span>↗</span></a>
+      <div class="hero-note"><span>✦</span> Private order chat · Human support</div>
+      <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+    </section>
+    <section class="section" id="products"><div class="section-heading"><div><div class="eyebrow">THE COLLECTION</div><h2>Choose your product</h2></div><p>Clear prices. Direct support.<br>One private conversation per order.</p></div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+    <section class="how-section" id="how"><div class="eyebrow">SIMPLE BY DESIGN</div><h2>How it works</h2><div class="steps">
+      <article><span>01</span><h3>Create an account</h3><p>Register to keep your orders and conversations private.</p></article>
+      <article><span>02</span><h3>Start an order</h3><p>Choose a product and open its dedicated order chat.</p></article>
+      <article><span>03</span><h3>Chat with us</h3><p>Discuss availability, payment and delivery directly with the shop.</p></article>
+    </div></section>
+  </main>
+  <footer><a class="brand" href="/"><span class="brand-mark">S</span> SaveSub<span class="dot">.</span></a><span>© <span id="year"></span> SaveSub. All rights reserved.</span><span>Support through your private order chat.</span></footer>
+  <div class="modal-backdrop hidden" id="authModal"><section class="modal"><button class="modal-close" id="authClose">×</button><div class="eyebrow">WELCOME TO SAVESUB</div><h2 id="authTitle">Create your account</h2><form id="authForm"><label>Email address<input type="email" id="email" required autocomplete="email" placeholder="you@example.com"></label><label>Password<input type="password" id="password" required minlength="8" autocomplete="current-password" placeholder="At least 8 characters"></label><p class="form-error" id="authError"></p><button class="btn btn-primary btn-full" id="authSubmit">Create account</button></form><p class="switch-auth" id="authSwitch">Already registered? <button type="button">Log in</button></p></section></div>
+  <div class="modal-backdrop hidden" id="accountModal"><section class="modal modal-wide"><button class="modal-close" id="accountClose">×</button><div class="eyebrow">YOUR PRIVATE SPACE</div><h2 id="accountTitle">Your orders</h2><div id="accountContent"></div></section></div>
+  <div class="toast" id="toast"></div><script src="/app.js"></script>
+</body></html>
